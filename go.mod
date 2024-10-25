@@ -1,3 +1,3 @@
-module github.com/seanbreckenridge/subpath-serve
+module github.com/purarue/subpath-serve
 
 go 1.17

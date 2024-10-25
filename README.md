@@ -1,6 +1,6 @@
 # subpath-serve
 
-A small server used to serve text files from my [dotfiles](https://github.com/seanbreckenridge/dotfiles) (though it could be used to serve any text files/folder).
+A small server used to serve text files from my [dotfiles](https://github.com/purarue/dotfiles) (though it could be used to serve any text files/folder).
 
 Any request to `/...` tries to match against some file basepath from a root folder (defaults to `./serve`).
 
@@ -12,7 +12,7 @@ Appending `?dark` to the end of a URL converts a request to an HTML response wit
 
 Appending `?redirect` to the end of the URL redirects to the corresponding `-git-http-prefix`, e.g.:
 
-`.gitignore?redirect` -> <https://github.com/seanbreckenridge/dotfiles/blob/master/.gitignore>
+`.gitignore?redirect` -> <https://github.com/purarue/dotfiles/blob/master/.gitignore>
 
 Example Requests:
 
@@ -42,12 +42,12 @@ It matches `./folder1/a` just because that's the one it found first, if there's 
 
 ```sh
 usage: subpath-serve [FLAG...]
-For instructions, see https://github.com/seanbreckenridge/subpath-serve
+For instructions, see https://github.com/purarue/subpath-serve
 
   -folder string
     	path to serve subpath-serve on (default "./serve")
   -git-http-prefix string
-    	Optionally, provide a prefix which when the matched filepath is appended to, links to a git web view (e.g. https://github.com/seanbreckenridge/dotfiles/blob/master)
+    	Optionally, provide a prefix which when the matched filepath is appended to, links to a git web view (e.g. https://github.com/purarue/dotfiles/blob/master)
   -port int
     	port to serve subpath-serve on (default 8050)
 ```
@@ -55,7 +55,7 @@ For instructions, see https://github.com/seanbreckenridge/subpath-serve
 As an example, you can use my dotfiles:
 
 ```
-git clone "https://github.com/seanbreckenridge/dotfiles.git" "./serve"
+git clone "https://github.com/purarue/dotfiles.git" "./serve"
 subpath-serve
 ```
 
@@ -72,7 +72,7 @@ Install `golang`.
 You can clone and run `go build`, or:
 
 ```
-go install -v "github.com/seanbreckenridge/subpath-serve@latest"
+go install -v "github.com/purarue/subpath-serve@latest"
 ```
 
 which downloads, builds and puts the binary on your `$GOBIN`.

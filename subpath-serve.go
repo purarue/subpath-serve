@@ -45,10 +45,10 @@ func parseFlags() *config {
 	// flag definitions
 	port := flag.Int("port", 8050, "port to serve subpath-serve on")
 	serveFolder := flag.String("folder", "./serve", "path to serve subpath-serve on")
-	repoPrefix := flag.String("git-http-prefix", "", "Optionally, provide a prefix which when the matched filepath is appended to, links to a git web view (e.g. https://github.com/seanbreckenridge/dotfiles/blob/master)")
+	repoPrefix := flag.String("git-http-prefix", "", "Optionally, provide a prefix which when the matched filepath is appended to, links to a git web view (e.g. https://github.com/purarue/dotfiles/blob/master)")
 	// print repo in help text
 	flag.Usage = func() {
-		fmt.Fprintln(os.Stderr, "usage: subpath-serve [FLAG...]\nFor instructions, see https://github.com/seanbreckenridge/subpath-serve")
+		fmt.Fprintln(os.Stderr, "usage: subpath-serve [FLAG...]\nFor instructions, see https://github.com/purarue/subpath-serve")
 		fmt.Fprintln(os.Stderr, "")
 		flag.PrintDefaults()
 	}
@@ -162,7 +162,7 @@ html, body {
 				{{ if .PrefixInfo  }}
 				<div>View on <a href="{{ .PrefixInfo.Url }}">{{ .PrefixInfo.Hostname }}</a></div>
 				{{ end }}
-        <div>Served with <a href="https://github.com/seanbreckenridge/subpath-serve">subpath-serve</a></div>
+        <div>Served with <a href="https://github.com/purarue/subpath-serve">subpath-serve</a></div>
     </footer>
     <script>
         function RawFile() {
@@ -270,7 +270,7 @@ func render(w *http.ResponseWriter, info *PageInfo, tmpl *template.Template, isD
 	}
 }
 
-// https://github.com/seanbreckenridge/dotfiles/blob/master -> github.com
+// https://github.com/purarue/dotfiles/blob/master -> github.com
 func getDomainName(httpPrefixUrl string) string {
 	name := "repository"
 	if httpPrefixUrl != "" {
