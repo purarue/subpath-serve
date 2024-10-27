@@ -16,9 +16,9 @@ Appending `?redirect` to the end of the URL redirects to the corresponding `-git
 
 Example Requests:
 
-- <https://sean.fish/d/>
-- <https://sean.fish/d/rc.conf>
-- <https://sean.fish/d/rc.conf?dark>
+- <https://purarue.xyz/d/>
+- <https://purarue.xyz/d/rc.conf>
+- <https://purarue.xyz/d/rc.conf?dark>
 
 ### matching strategy
 
